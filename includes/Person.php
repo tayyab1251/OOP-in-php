@@ -9,10 +9,16 @@ protected ->this is also can be accessed within the class but also can be access
 */
 
 class Person {
-    private $firstName = "Tayyab";
-    private $lastName = "Sabir";
+    private $firstName ;
+    private $lastName ;
+
+    // method to set first name and last name
+    public function setName($firstName, $lastName){
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+    }
 
     public function getName(){
-        return $this->firstName;
+        return "Full name : " .  $this->firstName . " " . $this->lastName;
     }
 }
